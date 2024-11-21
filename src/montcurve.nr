@@ -4,13 +4,9 @@ pub mod affine {
     // All group operations are induced by those of the corresponding Twisted Edwards curve.
     // See e.g. <https://eprint.iacr.org/2017/212.pdf> for details on the correspondences.
     use crate::{
-        is_square,
-        montcurve::curvegroup,
-        safe_inverse,
-        sqrt,
+        is_square, montcurve::curvegroup, safe_inverse, sqrt,
         swcurve::affine::{Curve as SWCurve, Point as SWPoint},
-        tecurve::affine::{Curve as TECurve, Point as TEPoint},
-        ZETA,
+        tecurve::affine::{Curve as TECurve, Point as TEPoint}, ZETA,
     };
     use std::cmp::Eq;
 
@@ -223,8 +219,7 @@ pub mod curvegroup {
     // All group operations are induced by those of the corresponding Twisted Edwards curve.
     // See e.g. <https://eprint.iacr.org/2017/212.pdf> for details on the correspondences.
     use crate::{
-        montcurve::affine,
-        swcurve::curvegroup::{Curve as SWCurve, Point as SWPoint},
+        montcurve::affine, swcurve::curvegroup::{Curve as SWCurve, Point as SWPoint},
         tecurve::curvegroup::{Curve as TECurve, Point as TEPoint},
     };
     use std::cmp::Eq;

@@ -6,8 +6,7 @@ pub mod affine {
     // See <https://eprint.iacr.org/2008/522.pdf> for details.
     use crate::{
         montcurve::affine::{Curve as MCurve, Point as MPoint},
-        swcurve::affine::{Curve as SWCurve, Point as SWPoint},
-        tecurve::curvegroup,
+        swcurve::affine::{Curve as SWCurve, Point as SWPoint}, tecurve::curvegroup,
     };
     use std::cmp::Eq;
 
@@ -199,8 +198,7 @@ pub mod curvegroup {
     // See section 3 of <https://eprint.iacr.org/2008/522.pdf> for details.
     use crate::{
         montcurve::curvegroup::{Curve as MCurve, Point as MPoint},
-        swcurve::curvegroup::{Curve as SWCurve, Point as SWPoint},
-        tecurve::affine,
+        swcurve::curvegroup::{Curve as SWCurve, Point as SWPoint}, tecurve::affine,
     };
     use std::cmp::Eq;
 

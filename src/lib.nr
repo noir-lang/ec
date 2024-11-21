@@ -210,7 +210,6 @@ mod tests {
     #[test]
     fn smoke_test() {
         // Tests may be checked against https://github.com/cfrg/draft-irtf-cfrg-hash-to-curve/tree/main/poc
-
         // Define Baby Jubjub (ERC-2494) parameters in affine representation
         let bjj_affine = AffineCurve::new(
             168700,
