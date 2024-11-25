@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/noir-lang/ec/compare/v0.1.1...v0.1.2) (2024-11-25)
+
+
+### Bug Fixes
+
+* Remove reference to `std::ec` ([#6](https://github.com/noir-lang/ec/issues/6)) ([dc8bf37](https://github.com/noir-lang/ec/commit/dc8bf37f9456763c1ab448bd79ffa5025e05391e))
+
 ## [0.1.1](https://github.com/noir-lang/ec/compare/v0.1.0...v0.1.1) (2024-11-25)
 
 
