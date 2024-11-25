@@ -1,5 +1,5 @@
-use std::ec::tecurve::affine::Curve as TECurve;
-use std::ec::tecurve::affine::Point as TEPoint;
+use crate::tecurve::affine::Curve as TECurve;
+use crate::tecurve::affine::Point as TEPoint;
 
 pub struct BabyJubjub {
     pub curve: TECurve,
