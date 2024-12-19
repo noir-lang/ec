@@ -4,7 +4,7 @@ A library which exports the ec module which formerly existed within the Noir std
 
 ## Noir version compatibility
 
-This library is tested with all stable releases from Noir v0.36.0.
+This library is tested with all Noir stable releases from v0.36.0.
 
 ## Benchmarks
 
