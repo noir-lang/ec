@@ -2,10 +2,13 @@
 
 A library which exports the ec module which formerly existed within the Noir stdlib.
 
+## Noir version compatibility
+
+This library is tested with all Noir stable releases from v0.36.0.
+
 ## Benchmarks
 
 TODO
-
 
 ## Installation
 
