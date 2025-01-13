@@ -27,7 +27,7 @@ curve you want to use, which would be specified using any one of the methods
 `ec::{tecurve,montcurve,swcurve}::{affine,curvegroup}::new` which take the coefficients in the
 defining equation together with a generator point as parameters. You can find more detail in the
 comments in
-[`ec/src/lib.nr`](https://github.com/noir-lang/noir/blob/master/noir_stdlib/src/ec/mod.nr), but
+[`ec/src/lib.nr`](https://github.com/noir-lang/ec/blob/main/src/ec/lib.nr), but
 the gist of it is that the elliptic curves of interest are usually expressed in one of the standard
 forms implemented here (Twisted Edwards, Montgomery and Short Weierstraß), and in addition to that,
 you could choose to use `affine` coordinates (Cartesian coordinates - the usual (x,y) - possibly
@@ -81,7 +81,7 @@ does indeed lie on `c` by calling `c.contains(p1)`.
 ## Examples
 
 The
-[ec_baby_jubjub test](placehold.er)
+[ec_baby_jubjub test](https://github.com/noir-lang/ec/blob/914613273d3ff9dfec556d249e4455df2caac515/src/lib.nr#L211-L406)
 illustrates all of the above primitives on various forms of the Baby Jubjub curve. A couple of more
 interesting examples in Noir would be:
 
