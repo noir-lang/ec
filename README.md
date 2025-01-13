@@ -1,8 +1,3 @@
----
-title: Elliptic Curve Primitives
-keywords: [cryptographic primitives, Noir project]
-sidebar_position: 4
----
 # ec
 
 A library which exports the ec module which formerly existed within the Noir stdlib.
