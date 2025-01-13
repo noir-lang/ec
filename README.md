@@ -22,12 +22,12 @@ ec = { tag = "v0.1.0", git = "https://github.com/noir-lang/ec" }
 
 ### Elliptic curve configurations
 
-(`std::ec::{tecurve,montcurve,swcurve}::{affine,curvegroup}::Curve`), i.e. the specific elliptic
+(`ec::{tecurve,montcurve,swcurve}::{affine,curvegroup}::Curve`), i.e. the specific elliptic
 curve you want to use, which would be specified using any one of the methods
-`std::ec::{tecurve,montcurve,swcurve}::{affine,curvegroup}::new` which take the coefficients in the
+`ec::{tecurve,montcurve,swcurve}::{affine,curvegroup}::new` which take the coefficients in the
 defining equation together with a generator point as parameters. You can find more detail in the
 comments in
-[`noir_stdlib/src/ec/mod.nr`](https://github.com/noir-lang/noir/blob/master/noir_stdlib/src/ec/mod.nr), but
+[`ec/src/lib.nr`](https://github.com/noir-lang/noir/blob/master/noir_stdlib/src/ec/mod.nr), but
 the gist of it is that the elliptic curves of interest are usually expressed in one of the standard
 forms implemented here (Twisted Edwards, Montgomery and Short Weierstraß), and in addition to that,
 you could choose to use `affine` coordinates (Cartesian coordinates - the usual (x,y) - possibly
@@ -39,14 +39,14 @@ mixed coordinate representation is employed).
 
 ### Points
 
-(`std::ec::{tecurve,montcurve,swcurve}::{affine,curvegroup}::Point`), i.e. points lying on the
+(`ec::{tecurve,montcurve,swcurve}::{affine,curvegroup}::Point`), i.e. points lying on the
 elliptic curve. For a curve configuration `c` and a point `p`, it may be checked that `p`
 does indeed lie on `c` by calling `c.contains(p1)`.
 
 ## Methods
 
-(given a choice of curve representation, e.g. use `std::ec::tecurve::affine::Curve` and use
-`std::ec::tecurve::affine::Point`)
+(given a choice of curve representation, e.g. use `ec::tecurve::affine::Curve` and use
+`ec::tecurve::affine::Point`)
 
 - The **zero element** is given by `Point::zero()`, and we can verify whether a point `p: Point` is
   zero by calling `p.is_zero()`.
@@ -76,7 +76,7 @@ does indeed lie on `c` by calling `c.contains(p1)`.
   the curve configurations, the SWU map-to-curve method may be called as `c.swu_map(z,n)`, where
   `z: Field` depends on `Field` and `c` and must be chosen by the user (the conditions it needs to
   satisfy are specified in the comments
-  [here](https://github.com/noir-lang/noir/blob/master/noir_stdlib/src/ec/mod.nr)).
+  [here](https://github.com/noir-lang/ec/blob/master/src/lib.nr)).
 
 ## Examples
 
@@ -90,7 +90,7 @@ from the private key. This is a matter of using scalar multiplication. In the ca
 for example, this code would do:
 
 ```rust
-use std::ec::tecurve::affine::{Curve, Point};
+use ec::tecurve::affine::{Curve, Point};
 
 fn bjj_pub_key(priv_key: Field) -> Point
 {
